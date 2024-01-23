@@ -3,6 +3,7 @@
   "globalDependencies": ["**/.env.*local"],
   "globalEnv": ["PORT"],
   "pipeline": {
+    "start": {},
     "build": {
       "outputs": ["dist/**", ".next/**", "!.next/cache/**", "public/dist/**"],
       "dependsOn": ["^build"],
