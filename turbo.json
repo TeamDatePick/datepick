@@ -3,11 +3,13 @@
   "globalDependencies": ["**/.env.*local"],
   "globalEnv": ["PORT"],
   "pipeline": {
-    "start": {},
+    "start": {
+      "cache": false
+    },
     "build": {
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**", "public/dist/**"],
+      "outputs": ["dist/**", "public/dist/**"],
       "dependsOn": ["^build"],
-      "env": ["NEXT_PUBLIC_API_HOST"]
+      "env": []
     },
     "test": {
       "outputs": ["coverage/**"],
