@@ -485,6 +485,7 @@ __metadata:
   dependencies:
     "@nestjs/cli": "npm:^10.0.0"
     "@nestjs/common": "npm:^10.0.0"
+    "@nestjs/config": "npm:^3.1.1"
     "@nestjs/core": "npm:^10.0.0"
     "@nestjs/platform-express": "npm:^10.0.0"
     "@nestjs/schematics": "npm:^10.0.0"
@@ -2734,7 +2735,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "datepick@workspace:."
   dependencies:
-    "@nestjs/config": "npm:^3.1.1"
     prettier: "npm:^3.2.4"
     turbo: "npm:^1.11.3"
     typescript: "npm:^5.3.3"
