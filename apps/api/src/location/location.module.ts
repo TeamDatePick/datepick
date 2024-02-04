@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
 import { LocationController } from './location.controller';
+import { HttpModule } from '@nestjs/axios';
+import { LocationService } from './location.service';
 
 @Module({
-  imports: [],
+  imports: [HttpModule],
   controllers: [LocationController],
-  providers: [],
+  providers: [LocationService],
 })
 export class LocationModule {}
