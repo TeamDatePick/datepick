@@ -9,9 +9,9 @@ import { LocationModule } from './location/location.module';
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: [
-        '../env/.env.development',
-        '../env/.env.production',
-        '../env/.env.test',
+        './env/.env.development',
+        './env/.env.production',
+        './env/.env.test',
       ],
     }),
     LocationModule,
