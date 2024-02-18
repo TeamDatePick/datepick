@@ -1,5 +1,5 @@
 {
-  "name": "datepick",
+  "name": "@datepick/app",
   "version": "0.0.1",
   "private": true,
   "scripts": {
