@@ -9,6 +9,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import styled from 'styled-components/native';
 import {RootStackParamList} from '../../type/RootStackParamList';
 import {StackScreenProps} from '@react-navigation/stack';
+import FixedLayout from '../../components/layouts/FixedLayout';
 type OnboardingScreenProps = StackScreenProps<
   RootStackParamList,
   'OnboardingScreen'
@@ -21,7 +22,7 @@ export const OnboardingScreen = ({navigation}: OnboardingScreenProps) => {
   };
 
   return (
-    <SafeAreaView style={styles(isDarkMode).safeAreaView}>
+    <FixedLayout>
       <HomeScreenContainer>
         <TitleContainer>
           <AppTitle>DATE PICK</AppTitle>
@@ -32,7 +33,7 @@ export const OnboardingScreen = ({navigation}: OnboardingScreenProps) => {
           <StartText>데이트픽 시작하기</StartText>
         </TouchableOpacity>
       </HomeScreenContainer>
-    </SafeAreaView>
+    </FixedLayout>
   );
 };
 
@@ -61,14 +62,6 @@ const StartText = styled.Text`
 
 const styles = (isDarkMode: boolean) =>
   StyleSheet.create({
-    safeAreaView: {
-      backgroundColor: isDarkMode ? Colors.dark : Colors.white,
-      flex: 1,
-    },
-    normal: {
-      backgroundColor: 'orange',
-      height: 100,
-    },
     button: {
       backgroundColor: '#efefef',
     },

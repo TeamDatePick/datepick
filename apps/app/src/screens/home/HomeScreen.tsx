@@ -1,29 +1,12 @@
-import {SafeAreaView, StyleSheet, Text, useColorScheme} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {Text} from 'react-native';
+import FixedLayout from '../../components/layouts/FixedLayout';
 
 export const HomeScreen = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
   return (
-    <SafeAreaView style={styles(isDarkMode).safeAreaView}>
+    <FixedLayout>
       <Text>this is home screen</Text>
-    </SafeAreaView>
+    </FixedLayout>
   );
 };
-
-const styles = (isDarkMode: boolean) =>
-  StyleSheet.create({
-    safeAreaView: {
-      backgroundColor: isDarkMode ? Colors.dark : Colors.white,
-      flex: 1,
-    },
-    normal: {
-      backgroundColor: 'orange',
-      height: 100,
-    },
-    button: {
-      backgroundColor: '#efefef',
-    },
-  });
 
 export default HomeScreen;
