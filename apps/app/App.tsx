@@ -1,8 +1,8 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-
 import OnboardingScreen from './src/screens/onboarding/OnboardingScreen';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import 'react-native-gesture-handler';
 
 function App(): React.JSX.Element {
   return (
