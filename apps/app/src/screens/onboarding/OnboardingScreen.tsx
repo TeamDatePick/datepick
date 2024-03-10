@@ -1,3 +1,4 @@
+import {useNavigation} from '@react-navigation/core';
 import {
   SafeAreaView,
   StyleSheet,
@@ -6,9 +7,18 @@ import {
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import styled from 'styled-components/native';
+import {RootStackParamList} from '../../type/RootStackParamList';
+import {StackScreenProps} from '@react-navigation/stack';
+type OnboardingScreenProps = StackScreenProps<
+  RootStackParamList,
+  'OnboardingScreen'
+>;
 
-export const OnboardingScreen = () => {
+export const OnboardingScreen = ({navigation}: OnboardingScreenProps) => {
   const isDarkMode = useColorScheme() === 'dark';
+  const handleStartButtonPress = () => {
+    navigation.replace('MainRouter', {});
+  };
 
   return (
     <SafeAreaView style={styles(isDarkMode).safeAreaView}>
@@ -18,9 +28,7 @@ export const OnboardingScreen = () => {
         </TitleContainer>
         <TouchableOpacity
           style={styles(isDarkMode).button}
-          onPress={() => {
-            console.log('start button pressed');
-          }}>
+          onPress={handleStartButtonPress}>
           <StartText>데이트픽 시작하기</StartText>
         </TouchableOpacity>
       </HomeScreenContainer>
